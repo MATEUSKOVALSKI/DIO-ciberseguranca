@@ -28,7 +28,7 @@ O objetivo é simular ataques de força bruta utilizando **Kali Linux** e a ferr
 
 ## Cenários de Teste
 
-**1. Ataque de Força Bruta em FTP**
+1. Ataque de Força Bruta em FTP
 ```bash
 medusa -h 192.168.56.101 -u admin -P wordlist.txt -M ftp
 
